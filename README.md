@@ -1,3 +1,13 @@
+> ### 🚨 Project Archived – Please Use `govee2mqtt` Instead
+>
+> This integration is no longer being actively maintained.
+>
+> Development and new features for Govee device support are now happening in **[govee2mqtt](https://github.com/wez/govee2mqtt/)**, which provides a more flexible and powerful MQTT-based solution (requires an external MQTT broker and Docker container).
+>
+> I no longer have the time I thought I would to keep up with this integration, so I’m officially archiving the project.  
+> Thank you to everyone who used, tested, and contributed along the way – I really appreciate you all. 💜
+
+
 # Govee Home Assistant Integration
 
 Control Govee lights in Home Assistant with fast IoT push updates and reliable cloud fallback.
