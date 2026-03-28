@@ -18,10 +18,10 @@ If this integration helps you, please star it!
 ## Install
 
 1) Add as custom repository:
-   - HACS → Integrations → ••• → Custom repositories → URL: `https://github.com/TheOneOgre/govee-cloud` → Category: Integration
+   - HACS → Integrations → ••• → Custom repositories → URL: `https://github.com/assada/govee-cloud` → Category: Integration
    - Or click this button from a browser logged into Home Assistant:
 
-     [![Open your Home Assistant instance and show a repository in the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=TheOneOgre&repository=govee-cloud&category=integration)
+     [![Open your Home Assistant instance and show a repository in the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=assada&repository=govee-cloud&category=integration)
 
 2) Restart Home Assistant.
 3) Settings → Devices & Services → Add Integration → Govee IoT.
