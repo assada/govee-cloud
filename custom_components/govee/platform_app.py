@@ -14,7 +14,7 @@ from typing import Any, Dict
 
 import requests
 
-APP_VERSION = "5.6.01"
+APP_VERSION = "6.5.00"
 _LOGGER = logging.getLogger(__name__)
 
 

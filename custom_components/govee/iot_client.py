@@ -39,7 +39,7 @@ class GoveeLoginError(Exception):
 
 _LOGGER = logging.getLogger(__name__)
 
-APP_VERSION = "5.6.01"
+APP_VERSION = "6.5.00"
 
 # Lightweight in-process caches to avoid excessive logins
 _APP_LOGIN_CACHE: dict[str, tuple[dict, float]] = {}
