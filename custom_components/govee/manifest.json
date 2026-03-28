@@ -2,7 +2,7 @@
   "domain": "govee",
   "name": "Govee IoT",
   "codeowners": [
-    "@TheOneOgre"
+    "@assada"
   ],
   "config_flow": true,
   "dependencies": [],
