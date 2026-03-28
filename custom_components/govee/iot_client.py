@@ -91,6 +91,10 @@ def _login(email: str, password: str) -> Dict[str, Any]:
     resp = requests.post(
         "https://app2.govee.com/account/rest/account/v1/login",
         json={"email": email, "password": password, "client": _client_id(email)},
+        headers={
+            "User-Agent": _ua(),
+            "appVersion": APP_VERSION,
+        },
         timeout=30,
     )
     resp.raise_for_status()

@@ -42,6 +42,10 @@ class PlatformAppClient:
         resp = requests.post(
             "https://app2.govee.com/account/rest/account/v1/login",
             json={"email": self._email, "password": self._password, "client": self._client_id},
+            headers={
+                "User-Agent": _ua(),
+                "appVersion": APP_VERSION,
+            },
             timeout=30,
         )
         resp.raise_for_status()
