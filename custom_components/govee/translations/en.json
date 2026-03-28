@@ -6,6 +6,7 @@
         "data": {
           "iot_email": "Govee Email",
           "iot_password": "Govee Password",
+          "api_key": "Developer API Key (optional, for REST fallback)",
           "delay": "Polling Delay (seconds, 0 = auto)"
         }
       }

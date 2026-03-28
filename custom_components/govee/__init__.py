@@ -7,7 +7,7 @@ import homeassistant.helpers.config_validation as cv  # type: ignore
 from homeassistant.config_entries import ConfigEntry  # type: ignore
 from homeassistant.core import HomeAssistant  # type: ignore
 
-from .const import DOMAIN, CONF_IOT_EMAIL, CONF_IOT_PASSWORD, CONF_IOT_PUSH_ENABLED
+from .const import DOMAIN, CONF_IOT_EMAIL, CONF_IOT_PASSWORD, CONF_IOT_PUSH_ENABLED, CONF_API_KEY
 from .iot_client import GoveeIoTClient
 from .api import GoveeClient
 from .learning_storage import GoveeLearningStorage
@@ -49,8 +49,8 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry):
         manifest_version = None
 
     storage = GoveeLearningStorage(hass.config.config_dir, hass, integration_version=manifest_version)
-    # API key no longer required; use IoT discovery
-    hub = await GoveeClient.create("", storage, hass, config_entry=entry)
+    api_key = entry.options.get(CONF_API_KEY) or entry.data.get(CONF_API_KEY, "")
+    hub = await GoveeClient.create(api_key, storage, hass, config_entry=entry)
 
 
     # New style: per entry_id

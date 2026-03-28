@@ -24,3 +24,4 @@ CONF_IOT_PASSWORD = "iot_password"
 CONF_IOT_PUSH_ENABLED = "enable_iot_push"
 # Deprecated/removed: CONF_PLATFORM_APP_ENABLED
 CONF_IOT_CONTROL_ENABLED = "enable_iot_control"
+CONF_API_KEY = "api_key"

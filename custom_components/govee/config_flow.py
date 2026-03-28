@@ -16,6 +16,7 @@ from .const import (
     CONF_IOT_PASSWORD,
     CONF_IOT_PUSH_ENABLED,
     CONF_IOT_CONTROL_ENABLED,
+    CONF_API_KEY,
     DOMAIN,
 )
 from .iot_client import _login, _extract_token, GoveeLoginError
@@ -56,6 +57,7 @@ class GoveeFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
                         CONF_IOT_PUSH_ENABLED: True,
                         CONF_IOT_CONTROL_ENABLED: True,
                         CONF_DELAY: user_input.get(CONF_DELAY, 0),
+                        CONF_API_KEY: user_input.get(CONF_API_KEY, ""),
                     }
                     return self.async_create_entry(title="Govee", data=data)
                 errors["base"] = "invalid_auth"
@@ -75,6 +77,7 @@ class GoveeFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
                 {
                     vol.Required(CONF_IOT_EMAIL, default=""): cv.string,
                     vol.Required(CONF_IOT_PASSWORD, default=""): cv.string,
+                    vol.Optional(CONF_API_KEY, default=""): cv.string,
                     vol.Optional(CONF_DELAY, default=0): cv.positive_int,
                 }
             ),
